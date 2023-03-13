@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+
+    height: 100vh;
+}
+
+.grid img {
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+#lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.75);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
